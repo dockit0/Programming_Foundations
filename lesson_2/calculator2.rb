@@ -5,9 +5,6 @@ def prompt(message)
   puts("=> #{message}")
 end
 
-
-name = " "
-
 prompt("What is your name? ")
 name = gets().chomp()
  
@@ -18,19 +15,15 @@ loop do
   	break
 end
 
-
 def valid_number?(num)
   num.to_i() != 0
   else
-  	break
+    break
 end 
 
 prompt("Welcome to the calculator, #{name}!")
-
 loop do  # main loop
-
   first_number = ''
-
   loop do 
     prompt("What is the first number? ")
     first_number = gets().chomp()
@@ -42,10 +35,7 @@ loop do  # main loop
       prompt("That doesn't look like a valid number.")
     end
   end
-
-
   second_number = ''
-
   loop do
     prompt("What is the second number? ")
     second_number = gets().chomp()
@@ -57,7 +47,6 @@ loop do  # main loop
       prompt("That doesn't look like a valid number.")
     end
   end
-
 
   answer_prompt = <<-MSG
     What operation would you like to perform? 
@@ -85,7 +74,6 @@ loop do  # main loop
     elsif answer == "divide" || answer == "4"
       result = first_number / second_number
       puts "#{first_number} / #{second_number} = #{result}"
-	  
     else
       puts "Oops, try again! Please enter a valid response."
     end 
@@ -94,11 +82,5 @@ loop do  # main loop
     play_again = gets().chomp()
     play_again = play_again.downcase 
     break unless play_again.start_with?("y")
-
-end 
-  
+end   
 puts "Thank you for using the calculator. Good bye!"
-
-
-
-
