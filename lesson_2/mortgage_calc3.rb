@@ -56,3 +56,7 @@ loop do
   prompt("Would you like to perform another calculation?")
   yes_or_no = gets().chomp()
   break unless yes_or_no.downcase().start_with("y")
+end
+
+prompt("Thank you for using the Mortgage Calculator!")
+prompt("Good bye!")
