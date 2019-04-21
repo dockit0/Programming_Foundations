@@ -29,10 +29,12 @@ loop do # main loop
     puts "#{first_number} / #{second_number} = #{result}"
   else
     puts "Oops, try again! Please enter a valid response."
-  end
-  puts "Would you like to play again? (y/n)"
-  play_again = gets().chomp()
-  play_again = play_again.downcase
-  break unless play_again.start_with?("y")
+  end 
+
+puts "Would you like to play again? (y/n)"
+play_again = gets().chomp()
+play_again = play_again.downcase
+break unless play_again.start_with?("y")
+
 end
 puts "Thank you for using the calculator. Good bye!"
